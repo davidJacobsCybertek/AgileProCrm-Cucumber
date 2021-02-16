@@ -1,8 +1,8 @@
 Feature: Login
 
-  @wip
+
   Scenario Outline: Authorised users can log in as <userType>
-    When user enters "<userType>" credentials
+    When the user logs in as "<userType>"
     Then user navigates to home page
 
     Examples:

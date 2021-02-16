@@ -9,8 +9,8 @@ import org.junit.Assert;
 
 public class LoginStepDefs {
 
-    @Given("user enters {string} credentials")
-    public void user_enters_credentials(String user) {
+    @Given("the user logs in as {string}")
+    public void the_user_logs_in_as(String user) {
         LoginPage loginPage=new LoginPage();
         loginPage.usernameInput.sendKeys(ConfigurationReader.get(user+"_username"));
         loginPage.passwordInput.sendKeys(ConfigurationReader.get(user+"_password"));
@@ -24,4 +24,12 @@ public class LoginStepDefs {
     public void user_navigates_to_home_page() {
         Assert.assertTrue("verify page title contains:", Driver.get().getTitle().contains(") Portal"));
     }
+
+
+    @Given("the user logged in")
+    public void the_user_logged_in() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 }
