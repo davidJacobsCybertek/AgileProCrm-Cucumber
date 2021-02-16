@@ -41,6 +41,6 @@ DrivePage drivePage=new DrivePage();
     @Then("the user can display {string} window")
     public void the_user_can_display_window(String drive) {
 //        BrowserUtils.waitFor(5);
-       Assert.assertTrue(Driver.get().getTitle().toLowerCase(Locale.ROOT).contains(") "+drive.toLowerCase(Locale.ROOT)));
+       Assert.assertTrue(Driver.get().getTitle().toLowerCase().contains(") "+drive.toLowerCase()));
     }
 }
